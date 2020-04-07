@@ -1,24 +1,10 @@
-# README
+## Development
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+$ docker build . -t nginx-s3-x-accel-redirect && docker run --rm -p 80:80 nginx-s3-x-accel-redirect
 
-Things you may want to cover:
+$ export S3_BUCKET_NAME=... AWS_ACCESS_KEY=... AWS_SECREAT_ACCESS_KEY=...
+$ rails s
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+$ curl http://localhost/sample
+```
